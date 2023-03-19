@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <div class="Scoreboard">
+        <!-- Title -->
+        <div class="title">
+            <div class="rock">
+                ROCK
+            </div>
+            <div class="paper">
+                PAPER
+            </div>
+            <div class="scissor">
+                SCISSOR
+            </div>
+        </div>
+        <!-- ScoreCard -->
+        <div class="Scorecard">
+            <div class="compScore score">
+                <p>COMPUTER<br>SCORE</p>
+                <p3 id="compscore">0</p3>
+            </div>
+            <div class="userScore score">
+                <p>YOUR<br>SCORE</p>
+                <p3 id="userscore">0</p3>
+            </div>
+        </div>
+</header>
+<!-- main div -->
+<div class="rule">
+    <button class="close-btn" onclick="close()">X</button>
+<div class="rule_bar">
+    
+    <ul>
+        <h1>Game Rules</h1>
+        <li >Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+        <li>If both players lay down the same hand, each player lays down another hand</li>
+    </ul>
+</div>
+</div>
+<div >
+<main>
+    <button class="btn-circle btn-paper pick" onclick="pickUserHand('paper')">
+        <span class="wrapper">
+            <img src="assets/paper.svg" alt="">
+        </span>
+    </button>
+    <button class="btn-circle btn-rock pick" onclick="pickUserHand('rock')">
+        <span class="wrapper">
+            <img src="assets/rock.svg" alt="">
+        </span>
+    </button>
+    <button class="btn-circle btn-scissor" onclick="pickUserHand('scissor')">
+        <span class="wrapper">
+            <img src="assets/scissor.svg" alt="">
+        </span>
+    </button>
+</main>
+
+<!-- contest div -->
+<div class="contest">
+    <div class="userpicked">
+        <h2>YOU PICKED</h2>
+        <div>
+            <span class="wrapper contest-u">
+                <img id="userpicked" src="assets/paper.png" alt="">
+            </span>
+        </div>
+    </div>
+
+    <div class="results">
+        <P id="youwin">YOU WIN</P>
+        <P id="againtpc">AGAINST PC</P>
+        <div onclick="restartGame()">
+            <button class="newbutton" id="play-reset">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <div class="comppicked">
+        <h2>PC PICKED</h2>
+        <div>
+            <span class="wrapper contest-u">
+                <img id="computerpicked" src="assets/Paper.png" alt="">
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<!-- you win -->
+<div class="container">
+    <div class="cup">
+        <img src="assets/cup.svg" alt="">
+    </div>
+    <div class="text">
+        <h1>HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+    </div>
+    <div onclick="restartGame2()">
+        <button class="newbutton" id="reset">PLAY AGAIN</button>
+    </div>
+
+</div>
+</body>
+<footer>
+    <div onclick="Rule()">
+    <button class="rules-btn">Rules </button>
+</div>
+    <div onclick="next()">
+        <button class="nxt-btn">Next </button>
+    </div>
+</footer>
+
+</html>
